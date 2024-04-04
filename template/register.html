@@ -1,0 +1,65 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="static/static/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <script src="static/static/js/bootstrap.min.js"></script>
+    <script src="static/static/js/popper.js"></script>
+    
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 mt-3 mx-auto shadow">
+                <h2 class="mb-5 text-center">User Registeration</h2>
+                {% if errormsg %}
+
+                <div class="alert alert-danger">
+                    {{errormsg}}
+                </div>
+                {% endif %}
+                <form method="POST" action="">
+                    {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="Input1" class="form-label"><strong>username:</strong></label>
+                            <input type="email" class="form-control" id="Input1" name="uname" placeholder="name@example.com">
+                        
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Input2" class="form-label"><strong>Password:</strong></label>
+                            <input type="password" class="form-control" id="Input2" name="upass" placeholder="enter password">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Input3" class="form-label"><strong> Confirm Password:</strong></label>
+                            <input type="password" class="form-control" id="Input3" name="upsc" placeholder="Confirm password">
+                        </div>  
+
+                        <div class="mb-3">
+                            <input type="submit" class="btn btn-success"  value="Register">
+                            already user?&nbsp;<a href="/login" style="text-decoration:none;">Login </a><br>
+                            <!-- forgot password?<a href="/next" style="text-decoration: none;">next</a> -->
+                        </div>
+
+                        {% if success %}
+                            <div class=" alert alert-danger">
+                                {{success}}
+                            </div>
+
+                        {% endif %}
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

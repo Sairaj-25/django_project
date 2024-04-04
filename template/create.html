@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2> create message</h2>
+<form method="POST" action="">
+    {% csrf_token %}
+    <table border="1" align="center">
+        <tr>
+            <td>Enter name:</td>
+            <td><input type="text" name="uname" id=""></td>
+               
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="uemail" required></td>
+        </tr>
+        <tr>
+            <td>Mobile:</td>
+            <td><input type="mobile" name="mob" required></td>
+        </tr>
+        
+        <tr align="center">
+            <td align="center">
+          <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+    
+</body>
+</html>

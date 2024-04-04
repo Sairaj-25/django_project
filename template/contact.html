@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+
+
+<!-- contact -->
+<div class="row">
+    <div class="col-md-12 p-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.0798437673093!2d73.75119586508487!3d19.98460159864822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb636418beed%3A0x475f9820c94dfb09!2sKrishna%20Darshan%20appartments!5e0!3m2!1sen!2sin!4v1704696501443!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <div class="col-md-6 mt-5">
+        <h3><i class="bi bi-building-fill text-danger"></i></h3>
+        <h4>Address</h4>
+      <hr>
+        Flat no-A-806 Essencia Heights, <br>
+        Survey No.16/7, New, Baner-Mahalunge Rd, <br>
+        near Orchid Hotel and Balewadi Stadium,<br>
+        Pune, Maharashtra 411045
+    </div>
+    
+    <div class="col-md-6 mt-5">
+      <h3><i class="bi bi-question-circle-fill"></i></h3>
+      <hr>
+      <form method="POST" action="">
+        <div class="mb-1">
+          <label for="Input1" class="form-label"><strong>Name:</strong></label>
+          <input type="email" class="form-control" id="Input1" name="uname" placeholder="">
+        </div>
+
+      <div class="mb-1">
+        <label for="Input2" class="form-label"><strong>Contact:</strong></label>
+        <input type="number" class="form-control" id="Input2" name="contact" placeholder="">
+      </div>
+
+      <div class="mb-1">
+      <label for="Input3" class="form-label"><strong>Email:</strong></label>
+      <input type="email" class="form-control" id="Input3" name="email" placeholder="name@example.com">
+      </div>
+
+      <div class="mb-1">
+        <label for="Input4" class="form-label"><strong>Message:</strong></label>
+        <textarea name="msg" class="form-control" cols="20" rows="4"></textarea>
+     </div>
+
+      <div class="mb-3">
+          <input type="submit" class="btn btn-success"  value="Send">
+          
+      </div>
+      </form>
+    </div>
+    
+    
+    
+    <!--google map end-->
+</div>
+
+
+{% endblock 'main' %}

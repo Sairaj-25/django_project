@@ -1,0 +1,36 @@
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message|dashboard</title>
+</head>
+<body>
+    <h2 align="center">Dashboard</h2>
+    <P align="center"><a href="/create">send message</a></P>
+    <table border="1" align="center">
+    <tr>
+        <th>sr.no</th>
+        <th>name</th>
+        <th>email</th>
+        <th>mobile</th>
+        <th>delete</th>
+    </tr>
+    
+    {% for x in data %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.mobile}}</td>
+        <td><a href="">delete</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
+
+{% endblock content %}

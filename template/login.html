@@ -1,0 +1,59 @@
+                                                                                                                                        
+{% load static %}
+{% block 'main' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="static/static/css/bootstrap.min.css">
+</head>
+<body>
+    <script src="static/static/js/bootstrap.min.js"></script>
+    <script src="static/static/js/popper.js"></script>
+    
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 mt-3 mx-auto shadow">
+                <h2 class="mb-5 text-center">Login</h2>
+                {% if errormsg %}
+
+                <div class="alert alert-danger">
+                    {{errormsg}}
+                </div>
+
+                {% endif %}
+                
+                <form method="POST" action="">
+                    {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="Input1" class="form-label"><strong>username:</strong></label>
+                            <input type="text" class="form-control" id="Input1" name="uname" placeholder="name@example.com" >
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="Input2" class="form-label"><strong>Password:</strong></label>
+                            <input type="password" class="form-control" id="Input2" name="upass" placeholder="enter password" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="btn btn-success"  value="login">
+                        </div>
+                            <a href="/forgot_pass"><h8>forgot password?</h8></a>
+                       
+                        <hr>
+                        <div class="mb-3">  
+                            <p>New user?&nbsp;&nbsp;<a href="/register" style="text-decoration:none;"><h7>Register</h7></a></p>                        
+                            
+                        </div>
+
+                      
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock 'main' %}
